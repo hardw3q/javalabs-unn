@@ -1,7 +1,8 @@
 package com.pixels.cpu;
 
-import com.pixels.command.impl.Command;
+
+import com.pixels.command.ICommand;
 
 public interface ICpu {
-    void exec(Command c);
+    void exec(ICommand c);
 }
