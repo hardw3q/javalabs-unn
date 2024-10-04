@@ -16,6 +16,6 @@ public class ICpuImpl implements ICpu {
 
     @Override
     public void exec(ICommand c) {
-
+        c.execute(this);
     }
 }
