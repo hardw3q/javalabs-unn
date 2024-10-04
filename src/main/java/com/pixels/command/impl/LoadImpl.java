@@ -3,17 +3,17 @@ package com.pixels.command.impl;
 import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.ICpuImpl;
 
-public class SaveCommand implements ICommand {
-    private int register;
+public class LoadImpl implements ICommand {
+    private int reg;
     private int memoryAddress;
 
-    public SaveCommand(int register, int memoryAddress) {
-        this.register = register;
+    public LoadImpl(int register, int memoryAddress) {
+        this.reg = register;
         this.memoryAddress = memoryAddress;
     }
 
     @Override
     public void execute(ICpuImpl cpu) {
-        cpu.memory[memoryAddress] = cpu.registers[register];
+        cpu.registers[reg] = cpu.memory[memoryAddress];
     }
 }

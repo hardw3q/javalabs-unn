@@ -1,7 +1,6 @@
 package com.pixels.cpu.impl;
 
 import com.pixels.command.ICommand;
-import com.pixels.command.impl.InitCommand;
 import com.pixels.cpu.ICpu;
 
 public class ICpuImpl implements ICpu {
