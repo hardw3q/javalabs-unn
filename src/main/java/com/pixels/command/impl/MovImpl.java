@@ -4,14 +4,15 @@ import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.ICpuImpl;
 
 public class MovImpl implements ICommand {
-    private int reg1;
-    private int reg2;
-    public MovImpl(int reg1, int reg2){
+    private Character reg1;
+    private Character reg2;
+    public MovImpl(Character reg1, Character reg2){
         this.reg1 = reg1;
         this.reg2 = reg2;
     }
     @Override
     public void execute(ICpuImpl cpu) {
-        cpu.registers[reg1] = cpu.registers[reg2];
+        int value = cpu.registers.get(reg2);
+        cpu.registers.put(reg1, value);
     }
 }

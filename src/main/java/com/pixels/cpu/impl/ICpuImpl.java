@@ -3,14 +3,20 @@ package com.pixels.cpu.impl;
 import com.pixels.command.ICommand;
 import com.pixels.cpu.ICpu;
 
+import java.util.HashMap;
+
 public class ICpuImpl implements ICpu {
-    public int[] registers = new int[4];
+    public HashMap<Character, Integer> registers = new HashMap<>();
     public int[] memory = new int[1024];
 
-
-
+    public ICpuImpl() {
+        registers.put('a', 0);
+        registers.put('b', 0);
+        registers.put('c', 0);
+        registers.put('d', 0);
+    }
     public void printRegisters() {
-        System.out.println("Registers: " + java.util.Arrays.toString(registers));
+        System.out.println("Registers: " + registers.toString());
     }
 
     @Override
