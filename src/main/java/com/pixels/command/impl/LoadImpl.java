@@ -1,9 +1,8 @@
 package com.pixels.command.impl;
 
-import com.pixels.command.ICommand;
-import com.pixels.cpu.impl.ICpuImpl;
+import com.pixels.cpu.impl.CpuImpl;
 
-public class LoadImpl implements ICommand {
+public class LoadImpl extends Command {
     private Character reg;
     private int memoryAddress;
 
@@ -13,7 +12,7 @@ public class LoadImpl implements ICommand {
     }
 
     @Override
-    public void execute(ICpuImpl cpu) {
+    public void execute(CpuImpl cpu) {
         int value = cpu.memory[memoryAddress];
         cpu.registers.put(reg, value);    }
 }

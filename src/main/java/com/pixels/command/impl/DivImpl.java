@@ -1,9 +1,8 @@
 package com.pixels.command.impl;
 
-import com.pixels.command.ICommand;
-import com.pixels.cpu.impl.ICpuImpl;
+import com.pixels.cpu.impl.CpuImpl;
 
-public class DivImpl implements ICommand {
+public class DivImpl extends Command {
     private Character reg1;
     private Character reg2;
 
@@ -13,7 +12,7 @@ public class DivImpl implements ICommand {
     }
 
     @Override
-    public void execute(ICpuImpl cpu) {
+    public void execute(CpuImpl cpu) {
         int value1 = cpu.registers.get(reg1);
         int value2 = cpu.registers.get(reg2);
         if (value2 != 0) {

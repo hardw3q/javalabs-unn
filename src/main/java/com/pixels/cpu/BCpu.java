@@ -1,9 +1,9 @@
 package com.pixels.cpu;
 
-import com.pixels.cpu.impl.ICpuImpl;
+import com.pixels.cpu.impl.CpuImpl;
 
 public class BCpu {
-    public static ICpuImpl build() {
-        return new ICpuImpl();
+    public static CpuImpl build() {
+        return new CpuImpl();
     }
 }

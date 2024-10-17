@@ -1,9 +1,8 @@
 package com.pixels.command.impl;
 
-import com.pixels.command.ICommand;
-import com.pixels.cpu.impl.ICpuImpl;
+import com.pixels.cpu.impl.CpuImpl;
 
-public class MovImpl implements ICommand {
+public class MovImpl extends Command {
     private Character reg1;
     private Character reg2;
     public MovImpl(Character reg1, Character reg2){
@@ -11,7 +10,7 @@ public class MovImpl implements ICommand {
         this.reg2 = reg2;
     }
     @Override
-    public void execute(ICpuImpl cpu) {
+    public void execute(CpuImpl cpu) {
         int value = cpu.registers.get(reg2);
         cpu.registers.put(reg1, value);
     }
