@@ -1,8 +1,6 @@
 package com.pixels;
 
-import com.pixels.command.ICommand;
 import com.pixels.command.impl.*;
-import com.pixels.cpu.BCpu;
 import com.pixels.cpu.impl.CpuImpl;
 
 
@@ -15,7 +13,7 @@ public class App
                 new Command("ld a 1"),
                 new Command("print", "a")
         };
-        CpuImpl cpu = BCpu.build();
+        CpuImpl cpu = new CpuImpl();
         for (Command c : prog) {
             cpu.exec(c);
         }
