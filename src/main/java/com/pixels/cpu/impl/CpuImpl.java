@@ -1,6 +1,6 @@
 package com.pixels.cpu.impl;
 
-import com.pixels.command.ICommand;
+import com.pixels.command.impl.Command;
 import com.pixels.cpu.ICpu;
 
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class CpuImpl implements ICpu {
     }
 
     @Override
-    public void exec(ICommand c) {
+    public void exec(Command c) {
         c.execute(this);
     }
 }

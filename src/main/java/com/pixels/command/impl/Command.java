@@ -1,29 +1,36 @@
 package com.pixels.command.impl;
 
 
+import com.pixels.command.CommandFactory;
 import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.CpuImpl;
 
-public class Command implements ICommand {
-    public void execute(CpuImpl cpu){
 
-    };
+public class Command {
+    private String name;
+    private String[] args;
+    private ICommand command;
 
-    public static Command createCommand(String instruction, String ...params) {
+    public Command(String command) {
+        String[] parts = command.split(" ");
+        this.name = parts[0];
+        this.args = new String[parts.length - 1];
+        System.arraycopy(parts, 1, this.args, 0, this.args.length);
 
-        switch (instruction) {
-            case "init":
-                return new InitImpl(Integer.parseInt(params[0]), Integer.parseInt(params[1]));
-            case "add":
-                return new AddImpl(params[0].toCharArray()[0],params[1].toCharArray()[0]);
-            case "mult":
-                return new MulImpl(params[0].toCharArray()[0], params[1].toCharArray()[0]);
-            case "ld":
-                return new LoadImpl(params[0].toCharArray()[0], Integer.parseInt(params[1]));
-            case "print":
-                return new PrintImpl(params[0].toCharArray()[0]);
-            default:
-                throw new UnsupportedOperationException("Unknown instruction: " + instruction);
-        }
+        // Используем фабрику для создания нужной команды
+        this.command = CommandFactory.getCommand(this.name, this.args);
+    }
+
+    public Command(String name, String... args) {
+        this.name = name;
+        this.args = args;
+
+        // Используем фабрику для создания нужной команды
+        this.command = CommandFactory.getCommand(this.name, this.args);
+    }
+
+    public void execute(CpuImpl cpu) {
+        // Выполняем команду
+        this.command.execute(cpu);
     }
 }

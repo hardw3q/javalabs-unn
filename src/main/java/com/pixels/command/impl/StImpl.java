@@ -1,8 +1,9 @@
 package com.pixels.command.impl;
 
+import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.CpuImpl;
 
-public class StImpl extends Command {
+public class StImpl implements ICommand {
     private Character reg;
     private int memoryAddress;
 

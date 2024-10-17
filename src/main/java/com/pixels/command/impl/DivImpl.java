@@ -1,8 +1,9 @@
 package com.pixels.command.impl;
 
+import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.CpuImpl;
 
-public class DivImpl extends Command {
+public class DivImpl implements ICommand {
     private Character reg1;
     private Character reg2;
 

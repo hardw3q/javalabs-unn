@@ -10,12 +10,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        ICommand prog[] = {
-                new LoadImpl('a', 1 ),
-                new PrintImpl('a')
+        Command prog[] = {
+                new Command("init", "1", "20"),
+                new Command("ld a 1"),
+                new Command("print", "a")
         };
         CpuImpl cpu = BCpu.build();
-        for (ICommand c : prog) {
+        for (Command c : prog) {
             cpu.exec(c);
         }
         cpu.printRegisters();

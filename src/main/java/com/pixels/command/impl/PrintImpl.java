@@ -1,8 +1,9 @@
 package com.pixels.command.impl;
 
+import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.CpuImpl;
 
-public class PrintImpl extends Command{
+public class PrintImpl implements ICommand {
         private Character reg;
 
         public PrintImpl(Character register) {

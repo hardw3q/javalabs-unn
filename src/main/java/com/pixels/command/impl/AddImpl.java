@@ -1,8 +1,9 @@
 package com.pixels.command.impl;
 
+import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.CpuImpl;
 
-public class AddImpl extends Command {
+public class AddImpl implements ICommand {
     private Character reg;
     private Character reg2;
 

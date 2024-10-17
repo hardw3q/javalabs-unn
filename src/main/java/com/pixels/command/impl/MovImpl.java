@@ -1,8 +1,9 @@
 package com.pixels.command.impl;
 
+import com.pixels.command.ICommand;
 import com.pixels.cpu.impl.CpuImpl;
 
-public class MovImpl extends Command {
+public class MovImpl implements ICommand {
     private Character reg1;
     private Character reg2;
     public MovImpl(Character reg1, Character reg2){
