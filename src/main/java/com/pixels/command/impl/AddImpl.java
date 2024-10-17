@@ -1,7 +1,7 @@
 package com.pixels.command.impl;
 
 import com.pixels.command.ICommand;
-import com.pixels.cpu.impl.CpuImpl;
+import com.pixels.cpu.impl.Cpu;
 
 public class AddImpl implements ICommand {
     private Character reg;
@@ -13,7 +13,7 @@ public class AddImpl implements ICommand {
     }
 
     @Override
-    public void execute(CpuImpl cpu) {
+    public void execute(Cpu cpu) {
         int value1 = cpu.registers.get(reg);
         int value2 = cpu.registers.get(reg2);
         int result = value1 + value2;

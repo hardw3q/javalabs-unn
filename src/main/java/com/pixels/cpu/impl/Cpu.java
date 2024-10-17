@@ -5,11 +5,11 @@ import com.pixels.cpu.ICpu;
 
 import java.util.HashMap;
 
-public class CpuImpl implements ICpu {
+public class Cpu implements ICpu {
     public HashMap<Character, Integer> registers = new HashMap<>();
     public int[] memory = new int[1024];
 
-    public CpuImpl() {
+    public Cpu() {
         registers.put('a', 0);
         registers.put('b', 0);
         registers.put('c', 0);
@@ -23,4 +23,6 @@ public class CpuImpl implements ICpu {
     public void exec(Command c) {
         c.execute(this);
     }
+
+
 }

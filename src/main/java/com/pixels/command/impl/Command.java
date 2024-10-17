@@ -3,7 +3,7 @@ package com.pixels.command.impl;
 
 import com.pixels.command.CommandFactory;
 import com.pixels.command.ICommand;
-import com.pixels.cpu.impl.CpuImpl;
+import com.pixels.cpu.impl.Cpu;
 
 
 public class Command {
@@ -29,7 +29,7 @@ public class Command {
         this.command = CommandFactory.getCommand(this.name, this.args);
     }
 
-    public void execute(CpuImpl cpu) {
+    public void execute(Cpu cpu) {
         // Выполняем команду
         this.command.execute(cpu);
     }

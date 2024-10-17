@@ -1,7 +1,7 @@
 package com.pixels.command.impl;
 
 import com.pixels.command.ICommand;
-import com.pixels.cpu.impl.CpuImpl;
+import com.pixels.cpu.impl.Cpu;
 
 public class PrintImpl implements ICommand {
         private Character reg;
@@ -11,7 +11,7 @@ public class PrintImpl implements ICommand {
         }
 
         @Override
-        public void execute(CpuImpl cpu) {
+        public void execute(Cpu cpu) {
             System.out.println("Register " + reg + ": " + cpu.registers.get(reg));
         }
 }
