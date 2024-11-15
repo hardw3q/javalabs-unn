@@ -5,10 +5,7 @@ import com.pixels.command.impl.Command;
 import com.pixels.cpu.impl.Cpu;
 import com.pixels.program.IProgram;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -31,11 +28,17 @@ public class Program implements IProgram {
     @Override
     public Command getMostFrequentCommand() {
         return commands.stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())) // Группировка команд по количеству их появления
+                .collect(Collectors.groupingBy(
+                        command -> command.name,
+                        Collectors.counting()
+                ))
                 .entrySet().stream()
-                .max(Map.Entry.comparingByValue()) // Поиск команды с максимальным количеством
-                .map(Map.Entry::getKey)
-                .orElse(null);
+                .max(Map.Entry.comparingByValue())
+                .map(entry -> commands.stream()
+                        .filter(command -> command.name.equals(entry.getKey()))
+                        .findFirst()
+                        .orElseThrow()) // Выбрасывает исключение, если команды с этим именем нет
+                .orElseThrow(() -> new NoSuchElementException("Список команд пуст."));
     }
 
     @Override
@@ -45,11 +48,22 @@ public class Program implements IProgram {
 
     @Override
     public List<Command> getCommandsSortedByFrequency() {
-        return commands.stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream()
-                .sorted(Map.Entry.<Command, Long>comparingByValue().reversed())
-                .map(Map.Entry::getKey)
+        Map<String, Long> frequencyMap = commands.stream()
+                .collect(Collectors.groupingBy(
+                        command -> command.name,
+                        Collectors.counting()
+                ));
+
+        Map<String, Command> uniqueCommandsByName = commands.stream()
+                .collect(Collectors.toMap(
+                        command -> command.name,    // Ключ — имя команды
+                        command -> command,         // Значение — сам объект команды
+                        (existing, replacement) -> existing // Если есть дубликаты, оставляем первый
+                ));
+
+        return uniqueCommandsByName.values().stream()
+                .sorted(Comparator.comparingLong(
+                        command -> -frequencyMap.get(command.name))) // Убывающая сортировка по частоте
                 .collect(Collectors.toList());
     }
 }

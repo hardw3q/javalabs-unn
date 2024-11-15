@@ -5,6 +5,8 @@ import com.pixels.cpu.impl.Cpu;
 import com.pixels.executer.impl.Executor;
 import com.pixels.program.impl.Program;
 
+import java.util.List;
+
 
 public class App 
 {
@@ -24,5 +26,10 @@ public class App
         Executor exec = new Executor(cpu);
         exec.run(prog);
         cpu.printRegisters();
+        System.out.println("Самая частая команда:" + "\n" + prog.getMostFrequentCommand().name);
+        List<Command> sorted = prog.getCommandsSortedByFrequency();
+        System.out.println("Команды по частоте:");
+        sorted.forEach(command -> System.out.println(command.name));
+
     }
 }

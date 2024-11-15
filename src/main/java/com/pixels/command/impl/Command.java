@@ -7,7 +7,7 @@ import com.pixels.cpu.impl.Cpu;
 
 
 public class Command {
-    private String name;
+    public String name;
     private String[] args;
     private ICommand command;
 
@@ -17,7 +17,6 @@ public class Command {
         this.args = new String[parts.length - 1];
         System.arraycopy(parts, 1, this.args, 0, this.args.length);
 
-        // Используем фабрику для создания нужной команды
         this.command = CommandFactory.getCommand(this.name, this.args);
     }
 
@@ -25,12 +24,10 @@ public class Command {
         this.name = name;
         this.args = args;
 
-        // Используем фабрику для создания нужной команды
         this.command = CommandFactory.getCommand(this.name, this.args);
     }
 
     public void execute(Cpu cpu) {
-        // Выполняем команду
         this.command.execute(cpu);
     }
 }
