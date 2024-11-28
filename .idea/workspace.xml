@@ -4,19 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="Верстка самотыкова">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/InstructionListCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/virtual_cpu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/cpu/impl/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/cpu/impl/Cpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/virtual_cpu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/virtual_cpu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,11 +94,24 @@
       <option name="presentableId" value="Default" />
       <updated>1732706885078</updated>
       <workItem from="1732706886054" duration="347000" />
-      <workItem from="1732707684663" duration="5162000" />
+      <workItem from="1732707684663" duration="8606000" />
     </task>
+    <task id="LOCAL-00001" summary="Верстка самотыкова">
+      <option name="closed" value="true" />
+      <created>1732800137602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732800137603</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Верстка самотыкова" />
+    <option name="LAST_COMMIT_MESSAGE" value="Верстка самотыкова" />
   </component>
 </project>

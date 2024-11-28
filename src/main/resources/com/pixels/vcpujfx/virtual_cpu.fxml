@@ -33,8 +33,8 @@
     </center>
     <bottom>
         <HBox alignment="CENTER">
-            <Button text="Run" />
-            <Button text="Reset" />
+            <Button fx:id="runButton" text="Run" />
+            <Button fx:id="resButton" text="Reset" />
         </HBox>
     </bottom>
     <right>
@@ -45,8 +45,6 @@
             <ListView fx:id="memoryList" prefWidth="260" />
             <Label text="Stats: " />
             <ListView fx:id="statList" prefWidth="260" />
-
-
         </VBox>
     </right>
 </BorderPane>
