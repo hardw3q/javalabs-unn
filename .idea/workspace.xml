@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="selection">
+    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="divide">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/InstructionListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/InstructionListCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/executer/impl/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/executer/impl/Executor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732706885078</updated>
       <workItem from="1732706886054" duration="347000" />
-      <workItem from="1732707684663" duration="18431000" />
+      <workItem from="1732707684663" duration="19151000" />
     </task>
     <task id="LOCAL-00001" summary="Верстка самотыкова">
       <option name="closed" value="true" />
@@ -132,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732825001804</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="divide">
+      <option name="closed" value="true" />
+      <created>1732825442443</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732825442443</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +152,7 @@
     <MESSAGE value="функциональ" />
     <MESSAGE value="Русский Z" />
     <MESSAGE value="selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="selection" />
+    <MESSAGE value="divide" />
+    <option name="LAST_COMMIT_MESSAGE" value="divide" />
   </component>
 </project>

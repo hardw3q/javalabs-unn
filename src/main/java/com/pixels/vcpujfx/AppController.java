@@ -49,9 +49,9 @@ public class AppController {
             instructionList.getSelectionModel().select(e.getIP());
         });
 
-        instructionList.setCellFactory(listView -> new InstructionListCell());
+        instructionList.setCellFactory(listView -> new InstructionListCell(e));
         runButton.setOnAction(event -> runProgram());
-        resButton.setOnAction(actionEvent -> resetProgram());
+        resButton.setOnAction(event -> resetProgram());
         addButton.setOnAction(event -> addInstruction());
         nextButton.setOnAction(event -> nextInstruction());
     }
@@ -69,6 +69,9 @@ public class AppController {
     }
     private void addInstruction(){
         try{
+            if(e.isRunning){
+                throw new Exception("Программа запущена");
+            }
             String instruction = instructionInput.getText();
 
             if (instruction != null && !instruction.isEmpty()) {

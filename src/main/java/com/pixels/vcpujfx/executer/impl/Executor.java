@@ -8,6 +8,7 @@ import com.pixels.vcpujfx.program.impl.Program;
 
 public class Executor implements IExecuter {
     private Cpu cpu;
+    public boolean isRunning = false;
     private int instructionPointer = -1;
     private Program program = null;
     public Executor(Cpu cpu){
@@ -22,6 +23,7 @@ public class Executor implements IExecuter {
     public void loadProgram(Program program) {
         this.program = program;
         instructionPointer = 0;
+        isRunning = true;
     }
 
     @Override
@@ -40,6 +42,7 @@ public class Executor implements IExecuter {
 
     @Override
     public void resetExecutor() {
+        isRunning = false;
         program = null;
         instructionPointer = -1;
     }

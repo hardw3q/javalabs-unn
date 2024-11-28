@@ -1,9 +1,7 @@
 package com.pixels.vcpujfx;
 
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
+import com.pixels.vcpujfx.executer.impl.Executor;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
@@ -15,9 +13,11 @@ public class InstructionListCell extends ListCell<String> {
     private final Button deleteButton;
     private final Button upButton;
     private final Button downButton;
+    private Executor e;
 
 
-    public InstructionListCell() {
+    public InstructionListCell(Executor e) {
+        this.e = e;
         label = new Label();
         deleteButton = new Button("Delete");
         upButton = new Button("Up");
@@ -25,9 +25,18 @@ public class InstructionListCell extends ListCell<String> {
 
 
         deleteButton.setOnAction(event -> {
+            if(e.isRunning){
+                alertExeption();
+                return;
+            }
             getListView().getItems().remove(getItem());
         });
         upButton.setOnAction(event -> {
+            if(e.isRunning){
+                alertExeption();
+                return;
+
+            }
             int currentIndex = getIndex();
             if (currentIndex > 0) {
                 swapItems(getListView(), currentIndex, currentIndex - 1);
@@ -35,6 +44,11 @@ public class InstructionListCell extends ListCell<String> {
         });
 
         downButton.setOnAction(event -> {
+            if(e.isRunning){
+                alertExeption();
+                return;
+
+            }
             int currentIndex = getIndex();
             if (currentIndex < getListView().getItems().size() - 1) {
                 swapItems(getListView(), currentIndex, currentIndex + 1);
@@ -46,6 +60,12 @@ public class InstructionListCell extends ListCell<String> {
 
         content = new HBox(label, spacer,upButton, downButton,  deleteButton);
         content.setSpacing(10);
+    }
+    private void alertExeption(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Ошибка");
+        alert.setHeaderText("Программа запущена");
+        alert.showAndWait();
     }
     private void swapItems(ListView<String> listView, int index1, int index2) {
         var items = listView.getItems();
