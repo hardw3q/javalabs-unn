@@ -15,31 +15,34 @@
     </properties>
 
     <dependencies>
+        <!-- JavaFX Dependencies (updated to version 23) -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>22-ea+11</version>
+            <version>23</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>22-ea+11</version>
+            <version>23</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>22-ea+11</version>
+            <version>23</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
-            <version>22-ea+11</version>
+            <version>23</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>22-ea+11</version>
+            <version>23</version>
         </dependency>
+
+        <!-- Additional Libraries -->
         <dependency>
             <groupId>org.controlsfx</groupId>
             <artifactId>controlsfx</artifactId>
@@ -99,6 +102,8 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- JUnit 5 for Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -115,6 +120,7 @@
 
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -124,6 +130,8 @@
                     <target>22</target>
                 </configuration>
             </plugin>
+
+            <!-- JavaFX Maven Plugin (updated to 0.0.8) -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -133,7 +141,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.pixels.vcpujfx/com.pixels.vcpujfx.HelloApplication</mainClass>
+                            <mainClass>com.pixels.vcpujfx/com.pixels.vcpujfx.App</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

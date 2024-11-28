@@ -5,36 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/CommandFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/ICommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/AddImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/DivImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/InitImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/LoadImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/MovImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/MulImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/PrintImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/impl/StImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/cpu/ICpu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/cpu/impl/Cpu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/executer/IExecuter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/executer/impl/Executor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/program/IProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/program/impl/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/virtual_cpu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +28,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2pQmsr8Vavl3r4vbRkIssJyOGDX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,6 +39,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.Helloapl.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -71,9 +50,27 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5827586",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Helloapl" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.pixels.vcpujfx.App" />
+      <module name="vcpujfx" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732706885078</updated>
       <workItem from="1732706886054" duration="347000" />
+      <workItem from="1732707684663" duration="5162000" />
     </task>
     <servers />
   </component>

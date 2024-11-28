@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.pixels.vcpujfx.AppController">
+    <top>
+        <HBox alignment="CENTER">
+            <Label text="Instruction Input" />
+            <TextField fx:id="instructionInput" prefWidth="200" />
+            <Button text="Add"  fx:id="addButton" />
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER">
+            <ListView fx:id="instructionList" prefWidth="540" />
+            <!-- <Label text="Statistics" /> -->
+            <!-- <HBox spacing="50">
+                <children>
+                    <Label fx:id="statText1" style="-fx-background-color: #f0f0f0;" />
+                    <Label fx:id="statText2" style="-fx-background-color: #f0f0f0;" />
+                </children>
+            </HBox> -->
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER">
+            <Button text="Run" />
+            <Button text="Reset" />
+        </HBox>
+    </bottom>
+    <right>
+        <VBox alignment="CENTER">
+            <Label text="Registers: " />
+            <ListView fx:id="registerList" prefWidth="260" />
+            <Label text="Memory: " />
+            <ListView fx:id="memoryList" prefWidth="260" />
+            <Label text="Stats: " />
+            <ListView fx:id="statList" prefWidth="260" />
+
+
+        </VBox>
+    </right>
+</BorderPane>
