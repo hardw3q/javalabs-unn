@@ -113,9 +113,7 @@ public class AppController {
         updateRegistries();
         updateMemory();
     }
-    private void setSelection(int id){
 
-    }
     private void resetProgram(){
 
         e.resetExecutor();

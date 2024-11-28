@@ -19,6 +19,10 @@ public class CommandFactory {
                 return new PrintImpl(args[0].toCharArray()[0]);
             case "mv":
                 return new MovImpl(args[0].toCharArray()[0], args[1].toCharArray()[0]);
+            case "st":
+                return new StImpl(args[0].toCharArray()[0], Integer.parseInt(args[1]));
+            case "div":
+                return new DivImpl(args[0].toCharArray()[0], args[1].toCharArray()[0]);
             default:
                 throw new UnsupportedOperationException("Unknown instruction: " + commandName);
         }

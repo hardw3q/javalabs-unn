@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="selection">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/command/CommandFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732706885078</updated>
       <workItem from="1732706886054" duration="347000" />
-      <workItem from="1732707684663" duration="17934000" />
+      <workItem from="1732707684663" duration="18431000" />
     </task>
     <task id="LOCAL-00001" summary="Верстка самотыкова">
       <option name="closed" value="true" />
@@ -123,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732824701545</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="selection">
+      <option name="closed" value="true" />
+      <created>1732825001804</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732825001804</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
