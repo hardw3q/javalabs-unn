@@ -45,6 +45,10 @@ public class AppController {
         hardwareInitialization();
         updateRegistries();
         updateMemory();
+        instructionList.addEventFilter(javafx.scene.input.MouseEvent.ANY, event -> {
+            instructionList.getSelectionModel().select(e.getIP());
+        });
+
         instructionList.setCellFactory(listView -> new InstructionListCell());
         runButton.setOnAction(event -> runProgram());
         resButton.setOnAction(actionEvent -> resetProgram());
