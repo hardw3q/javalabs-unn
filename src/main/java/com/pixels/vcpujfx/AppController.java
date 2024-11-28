@@ -24,6 +24,8 @@ public class AppController {
     @FXML
     private Button resButton;
     @FXML
+    private Button nextButton;
+    @FXML
     private TextField instructionInput;
     @FXML
     private ListView<String> registerList;
@@ -46,21 +48,8 @@ public class AppController {
         instructionList.setCellFactory(listView -> new InstructionListCell());
         runButton.setOnAction(event -> runProgram());
         resButton.setOnAction(actionEvent -> resetProgram());
-        addButton.setOnAction(event -> {
-            try{
-                String instruction = instructionInput.getText();
-
-                if (instruction != null && !instruction.isEmpty()) {
-                    new Command(instruction);
-                    instructionList.getItems().add(instruction);
-                    instructionInput.clear();
-                }
-                updateStat();
-            }catch (Exception e){
-                noSuchInstruction.setContentText(e.getMessage());
-                noSuchInstruction.showAndWait();
-            }
-        });
+        addButton.setOnAction(event -> addInstruction());
+        nextButton.setOnAction(event -> nextInstruction());
     }
     private void hardwareInitialization(){
         cpu = new Cpu();
@@ -73,6 +62,21 @@ public class AppController {
     private void updateMemory(){
         memoryList.getItems().clear();
         memoryList.setItems(cpu.getMemoryList());
+    }
+    private void addInstruction(){
+        try{
+            String instruction = instructionInput.getText();
+
+            if (instruction != null && !instruction.isEmpty()) {
+                new Command(instruction);
+                instructionList.getItems().add(instruction);
+                instructionInput.clear();
+            }
+            updateStat();
+        }catch (Exception e){
+            noSuchInstruction.setContentText(e.getMessage());
+            noSuchInstruction.showAndWait();
+        }
     }
     private void updateStat(){
         statList.getItems().clear();
@@ -91,17 +95,31 @@ public class AppController {
             System.out.println(instruction);
             program.addCommand(new Command(instruction));
         }
-        e.run(program);
+        e.loadProgram(program);
+        e.run();
         cpu.printRegisters();
-
+        instructionList.getSelectionModel().select(e.getIP());
         updateRegistries();
         updateMemory();
     }
+    private void nextInstruction(){
+
+        e.nextInstruction();
+        instructionList.getSelectionModel().select(e.getIP());
+        updateRegistries();
+        updateMemory();
+    }
+    private void setSelection(int id){
+
+    }
     private void resetProgram(){
-        instructionList.getItems().clear();
+
+        e.resetExecutor();
         hardwareInitialization();
         updateRegistries();
         updateMemory();
         updateStat();
+
+        instructionList.getSelectionModel().clearSelection();
     }
 }

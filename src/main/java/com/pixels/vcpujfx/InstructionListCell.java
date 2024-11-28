@@ -7,6 +7,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
+import javafx.scene.text.Font;
 
 public class InstructionListCell extends ListCell<String> {
     private final HBox content;
@@ -61,6 +62,7 @@ public class InstructionListCell extends ListCell<String> {
             setGraphic(null);
         } else {
             label.setText(item);
+
             setGraphic(content);
         }
     }

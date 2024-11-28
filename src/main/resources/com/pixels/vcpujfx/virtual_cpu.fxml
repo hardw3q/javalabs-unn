@@ -26,8 +26,10 @@
     </center>
     <bottom>
         <HBox alignment="CENTER">
-            <Button fx:id="runButton" text="Run" />
-            <Button fx:id="resButton" text="Reset" />
+            <Button fx:id="runButton" text="Запустить программу" />
+            <Button fx:id="nextButton" text="Следующая инструкция" />
+
+            <Button fx:id="resButton" text="Сбросить выполнение" />
         </HBox>
     </bottom>
     <right>
