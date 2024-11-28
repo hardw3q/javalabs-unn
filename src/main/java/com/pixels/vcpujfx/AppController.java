@@ -29,7 +29,8 @@ public class AppController {
     private ListView<String> registerList;
     @FXML
     private ListView<String> memoryList;
-
+    @FXML
+    private ListView<String> statList;
     private Alert noSuchInstruction;
     private Cpu cpu;
     private Executor e;
@@ -54,6 +55,7 @@ public class AppController {
                     instructionList.getItems().add(instruction);
                     instructionInput.clear();
                 }
+                updateStat();
             }catch (Exception e){
                 noSuchInstruction.setContentText(e.getMessage());
                 noSuchInstruction.showAndWait();
@@ -72,6 +74,16 @@ public class AppController {
         memoryList.getItems().clear();
         memoryList.setItems(cpu.getMemoryList());
     }
+    private void updateStat(){
+        statList.getItems().clear();
+        Program program = new Program();
+
+        for(String instruction : instructionList.getItems()){
+            System.out.println(instruction);
+            program.addCommand(new Command(instruction));
+        }
+        statList.setItems(program.getFrequencyListObservable());
+    }
     private void runProgram(){
         Program program = new Program();
 
@@ -89,5 +101,7 @@ public class AppController {
         instructionList.getItems().clear();
         hardwareInitialization();
         updateRegistries();
+        updateMemory();
+        updateStat();
     }
 }

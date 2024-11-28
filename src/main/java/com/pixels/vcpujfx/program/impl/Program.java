@@ -4,6 +4,8 @@ package com.pixels.vcpujfx.program.impl;
 
 import com.pixels.vcpujfx.command.impl.Command;
 import com.pixels.vcpujfx.program.IProgram;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -59,10 +61,14 @@ public class Program implements IProgram {
                         command -> command,         // Значение — сам объект команды
                         (existing, replacement) -> existing // Если есть дубликаты, оставляем первый
                 ));
-
         return uniqueCommandsByName.values().stream()
                 .sorted(Comparator.comparingLong(
                         command -> -frequencyMap.get(command.name))) // Убывающая сортировка по частоте
                 .collect(Collectors.toList());
+    }
+    public ObservableList<String> getFrequencyListObservable() {
+        ObservableList<String> result = FXCollections.observableArrayList();
+        getCommandsSortedByFrequency().forEach(command -> result.add(command.name));
+        return result;
     }
 }

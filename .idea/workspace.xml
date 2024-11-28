@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="Верстка самотыкова">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/InstructionListCell.java" afterDir="false" />
+    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="функциональ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/cpu/impl/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/cpu/impl/Cpu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/virtual_cpu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/pixels/vcpujfx/virtual_cpu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/program/impl/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/program/impl/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732706885078</updated>
       <workItem from="1732706886054" duration="347000" />
-      <workItem from="1732707684663" duration="8606000" />
+      <workItem from="1732707684663" duration="9303000" />
     </task>
     <task id="LOCAL-00001" summary="Верстка самотыкова">
       <option name="closed" value="true" />
@@ -104,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732800137603</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="функциональ">
+      <option name="closed" value="true" />
+      <created>1732815110646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732815110646</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Верстка самотыкова" />
-    <option name="LAST_COMMIT_MESSAGE" value="Верстка самотыкова" />
+    <MESSAGE value="функциональ" />
+    <option name="LAST_COMMIT_MESSAGE" value="функциональ" />
   </component>
 </project>
