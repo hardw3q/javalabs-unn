@@ -5,7 +5,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
-import javafx.scene.text.Font;
 
 public class InstructionListCell extends ListCell<String> {
     private final HBox content;
@@ -26,14 +25,14 @@ public class InstructionListCell extends ListCell<String> {
 
         deleteButton.setOnAction(event -> {
             if(e.isRunning){
-                alertExeption();
+                alertExсeption();
                 return;
             }
             getListView().getItems().remove(getItem());
         });
         upButton.setOnAction(event -> {
             if(e.isRunning){
-                alertExeption();
+                alertExсeption();
                 return;
 
             }
@@ -45,7 +44,7 @@ public class InstructionListCell extends ListCell<String> {
 
         downButton.setOnAction(event -> {
             if(e.isRunning){
-                alertExeption();
+                alertExсeption();
                 return;
 
             }
@@ -61,7 +60,7 @@ public class InstructionListCell extends ListCell<String> {
         content = new HBox(label, spacer,upButton, downButton,  deleteButton);
         content.setSpacing(10);
     }
-    private void alertExeption(){
+    private void alertExсeption(){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Ошибка");
         alert.setHeaderText("Программа запущена");

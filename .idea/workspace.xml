@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="divide">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/AppController.java" afterDir="false" />
+    <list default="true" id="054de5c8-808b-48e5-aaea-c85e18bc7634" name="Changes" comment="except">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/InstructionListCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/InstructionListCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/executer/impl/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pixels/vcpujfx/executer/impl/Executor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732706885078</updated>
       <workItem from="1732706886054" duration="347000" />
-      <workItem from="1732707684663" duration="19151000" />
+      <workItem from="1732707684663" duration="22271000" />
     </task>
     <task id="LOCAL-00001" summary="Верстка самотыкова">
       <option name="closed" value="true" />
@@ -141,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732825442443</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="except">
+      <option name="closed" value="true" />
+      <created>1732826126981</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732826126981</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +160,7 @@
     <MESSAGE value="Русский Z" />
     <MESSAGE value="selection" />
     <MESSAGE value="divide" />
-    <option name="LAST_COMMIT_MESSAGE" value="divide" />
+    <MESSAGE value="except" />
+    <option name="LAST_COMMIT_MESSAGE" value="except" />
   </component>
 </project>
